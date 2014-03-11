@@ -3,6 +3,7 @@ class GameObject
   Transform transform;
   ArrayList <GameObject> children = new ArrayList<GameObject>();
   ArrayList <Component> components = new ArrayList<Component>();
+  ArrayList <circleColider> cColiders = new ArrayList<circleColider>();
   GameObject parent;
   GameObject()
   {
@@ -28,6 +29,11 @@ class GameObject
   void addComponent(Component c)
   {
     components.add(c);
+  }
+  void addColider(circleColider cc)
+  {
+    cColiders.add(cc);
+    addComponent(cc);
   }
   void removeComponent(Component c)
   {
