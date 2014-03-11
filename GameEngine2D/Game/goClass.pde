@@ -35,6 +35,11 @@ class GameObject
     cColiders.add(cc);
     addComponent(cc);
   }
+  void removeColider(circleColider cc)
+  {
+    cColiders.remove(cc);
+    removeComponent (cc);
+  }
   void removeComponent(Component c)
   {
     components.remove(c);
