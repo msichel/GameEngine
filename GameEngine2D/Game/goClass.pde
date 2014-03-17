@@ -66,6 +66,17 @@ class GameObject
       c.update();
     }
   }
+  void lateUpdate()
+  {
+    for(GameObject g : children)
+    {
+      g.lateUpdate();
+    }
+    for(Component c : components)
+    {
+      c.lateUpdate();
+    }
+  }
   void render()
   {
     for(GameObject g : children)

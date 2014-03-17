@@ -32,6 +32,7 @@ void input()
 void update()
 {
   root.update();
+  root.lateUpdate();
 }
 void render()
 {

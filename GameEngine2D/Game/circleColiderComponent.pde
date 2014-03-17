@@ -10,7 +10,7 @@ class circleColider extends Component
   }
   circleColider checkColision(circleColider cc)
   {
-    if(dist(pos.x,cc.pos.x,pos.y,cc.pos.y) <= (radius+cc.radius)/2)
+    if(dist(pos.x,pos.y,cc.pos.x,cc.pos.y) <= (radius+cc.radius)/2)
     {
       return cc;
     }
